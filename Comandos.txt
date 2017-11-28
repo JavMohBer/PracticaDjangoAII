@@ -1,0 +1,9 @@
+Para crear base de datos:
+python manage.py migrate
+
+Para crear superusuario:
+python manage.py createsuperuser
+
+user: admin
+email: javierparraoyola619@hotmail.com
+password: superadmin
