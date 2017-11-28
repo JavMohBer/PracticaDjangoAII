@@ -1,9 +1,12 @@
-Para crear base de datos:
+- Para crear base de datos:
 python manage.py migrate
 
-Para crear superusuario:
+- Para crear superusuario:
 python manage.py createsuperuser
 
 user: admin
 email: javierparraoyola619@hotmail.com
 password: superadmin
+
+- Para arrancar el servidor
+python manage.py runserver
