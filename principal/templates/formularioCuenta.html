@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de cuenta</title>
+</head>
+<body>
+    <h2>Formulario de cuenta</h2>
+    <form action="" method="POST">{%  csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="number" value="Nombre de Usuario">
+        <br>
+        <input type="text" value="Usuario">
+        <br>
+        <input type="number" value="Saldo">
+    </form>
+</body>
+</html>

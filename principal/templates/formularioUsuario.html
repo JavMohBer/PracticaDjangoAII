@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de usuario</title>
+</head>
+<body>
+    <h2>Formulario de usuario</h2>
+    <form action="" method="POST">{%  csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="text" value="Nombre de Usuario">
+        <br>
+        <input type="password" value="Password">
+        <br>
+        <input type="email" value="Email">
+        <br>
+        <input type="text" value="Nombre">
+        <br>
+        <input type="text" value="Apellidos">
+    </form>
+</body>
+</html>

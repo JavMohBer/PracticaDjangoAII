@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de sucursal</title>
+</head>
+<body>
+    <h2>Formulario de sucursal</h2>
+    <form action="" method="POST">{%  csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="text" value="Banco">
+        <br>
+        <input type="text" value="Dirección">
+        <br>
+        <input type="text" value="Teléfono">
+    </form>
+</body>
+</html>

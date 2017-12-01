@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sucursales</title>
+</head>
+<body>
+<h2>Sucursales agrupadas por bancos</h2>
+
+{% for sucursal in sucursales %}
+    <p>{{ sucursal.entidad}}</p>
+    <p>{{ sucursal.direccion}}</p>
+    <p>{{ sucursal.telefono}}</p>
+{% endfor %}
+
+</body>
+</html>

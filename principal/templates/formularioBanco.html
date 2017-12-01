@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de banco</title>
+</head>
+<body>
+    <h2>Formulario de banco</h2>
+    <form action="" method="POST">{%  csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="text" value="Nombre">
+    </form>
+</body>
+</html>
