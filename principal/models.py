@@ -6,14 +6,14 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Banco(models.Model):
-    entidadId = models.CharField(max_length=4, unique=True)
+    entidadId = models.DecimalField(max_digits=4, unique=True)
     nombre = models.CharField()
 
     def __unicode__(self):
         return self.entidadId
 
 class Sucursal(models.Model):
-    sucursalId = models.CharField(max_length=4, unique=True)
+    sucursalId = models.DecimalField(max_digits=4, unique=True)
     entidad = models.ForeignKey(Banco)
     direccion = models.CharField()
     telefono = models.CharField()
@@ -32,7 +32,7 @@ class Usuario(models.Model):
         return self.nombreUsuario
 
 class Cuenta(models.Model):
-    numeroCuenta = models.CharField(max_length=20, unique=True)
+    numeroCuenta = models.DecimalField(max_digits=20, unique=True)
     usuarios = models.ForeignKey(Usuario)
     saldo = models.CharField()
 
