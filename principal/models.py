@@ -1,7 +1,6 @@
 #encoding:utf-8
 
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -23,8 +22,8 @@ class Sucursal(models.Model):
 
 class Usuario(models.Model):
     nombreUsuario = models.CharField(unique=True)
-    password = models.CharField(password=True)
-    email = models.CharField(email=True)
+    password = models.CharField()
+    email = models.EmailField()
     nombre = models.CharField()
     apellidos = models.CharField()
 
@@ -48,9 +47,9 @@ class TipoMovimiento(models.Model):
 
 class Movimiento(models.Model):
     fecha = models.DateTimeField()
-    numeroCuenta = models.ForeignKey(Cuenta.numeroCuenta)
+    numeroCuenta = models.ForeignKey(Cuenta)
     descripcion = models.TextField()
-    tipoMov = models.ForeignKey(TipoMovimiento, unique=True)
+    tipoMov = models.ForeignKey(TipoMovimiento)
     euros = models.CharField()
 
     def __unicode__(self):
